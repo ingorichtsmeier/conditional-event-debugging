@@ -1,0 +1,24 @@
+# Test configuration using spring-boot
+
+camunda.bpm:
+  job-execution.enabled: false
+  id-generator: simple
+  history-level: FULL 
+
+spring.datasource:
+#  url: jdbc:h2:mem:camunda-spring-boot-test;DB_CLOSE_ON_EXIT=false
+  url: jdbc:postgresql:camunda
+  username: camunda
+  password: camunda
+
+logging:
+  level:
+#    "[org.camunda.bpm.engine.jobexecutor]": INFO
+#    org.camunda.bpm.engine.impl.persistence.entity: TRACE
+    org.camunda.bpm.engine.cmd: DEBUG
+    org.camunda.bpm.engine.persistence: DEBUG
+#    org.camunda.bpm.engine.impl.batch: TRACE
+    org.camunda.bpm.engine.jobexecutor: DEBUG
+#    org.camunda.bpm.engine.impl.persistence.entity.JobEntity: DEBUG
+#    org.camunda.bpm.engine.pvm: DEBUG
+    org.camunda.bpm.engine.bpmn.behavior: DEBUG
