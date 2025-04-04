@@ -16,7 +16,7 @@ You add a asynchronous before in front of the conditional event and in front of 
 
 ## Run the example
 
-The example requires a local PostgresQL database. It can run in a docker container.
+The example requires a local PostgresQL database. It can run in a docker container. The database url is set to `jdbc:postgresql:camunda`.
 
 The example contains an integration test in [`ConditionalEventHandlingTest.java`](src/test/java/com/camunda/consulting/conditional_event_debugging/ConditionalEventHandlingTest.java). This test runs in the PostgresQL database with job executor enabled to have the parallel, overlapping transactions.
  
